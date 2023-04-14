@@ -1,0 +1,83 @@
+
+.welcomePage {
+    width: 100%;
+    min-height: 100%;
+
+    position: relative;
+    // inset: 0;
+     background-color: #f7f7fa;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position:fixed;
+     margin: 0%;
+     padding: 0%;
+
+
+}
+    .branding {
+         background-image: url("../../assets/Login_Image_Shape.c63b0f4ac70b3cf1.png"),url("../../assets/Login_Logo_Amadeus.5f4804a6f69cf76b.png");
+
+        background-repeat: no-repeat;
+        background-position: left bottom 20%,bottom 32px right;
+        background-size:auto}
+    .usermanagementPanel {
+            display: block;
+            max-width: 520px;
+            margin: 50px auto 32px;
+            padding-bottom: 32px;
+            overflow-y: hidden;
+            height:100%
+        }
+        .usermanagementMainContent {
+            display: block;
+            padding-top: 0;
+
+        }
+        .tit1 {
+            font-size: 25px;
+            color: #005eb8;
+            padding: 0;
+            margin-top: 0;
+            font-weight: bolder;
+            font-family: Verdana;
+            text-align: center;
+            display: block;
+            padding: 15px;
+            margin-top: 5px;
+
+        }
+.tit2 {
+font-size: 20pt;
+    color: #2fc7f4;
+    font-weight: 400;
+    font-family: Verdana;
+    text-align: left;
+    padding: 0 20px;
+    width: inherit;
+    display: inherit;
+    margin-top: -10px;
+    }
+
+#apple{
+    margin-top:35px;
+    align-items:center;
+    margin: 1% 39%;
+    min-width:250px ;
+
+}
+#cardt{
+    font-size: 25px;
+            color: #0f1010;
+            padding: 0;
+            margin-top: 0;
+            // font-weight: bolder;
+            font-family: Verdana;
+            text-align: center;
+        //  display: block;
+            // padding: 30px;
+            // margin-top: 10px;
+}
+#b1{
+    margin-left:30%;
+    margin-right: 5px;
+}

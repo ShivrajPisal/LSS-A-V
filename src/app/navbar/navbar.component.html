@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#nav1-content-withdropdown"
+      aria-controls="nav1-content-withdropdown"
+      [attr.aria-expanded]="!navbarCollapsed"
+      aria-label="Toggle navigation"
+      (click)="navbarCollapsed = !navbarCollapsed"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="javascript:void(0);" (click)="navbarCollapsed = true" id="a"> LSS Access Viewer</a>
+
+    <!-- Links -->
+    <!--div [ngbCollapse]="navbarCollapsed" class="collapse navbar-collapse" id="nav1-content-withdropdown">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="javascript:void(0);" (click)="navbarCollapsed = true">Link 1</a>
+        </li>
+        <li ngbDropdown class="nav-item">
+          <button type="button" class="btn nav-link" id="nav1-dropdown1-withdropdown" ngbDropdownToggle>Dropdown</button>
+          <div ngbDropdownMenu aria-labelledby="nav1-dropdown1-withdropdown">
+            <button ngbDropdownItem>Action 1</button>
+            <button ngbDropdownItem>Action 2</button>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li ngbDropdown class="nav-item">
+          <button type="button" class="btn nav-link" id="nav1-dropdown2-withdropdown" ngbDropdownToggle>
+            Dropdown right
+          </button>
+          <div ngbDropdownMenu aria-labelledby="nav1-dropdown2-withdropdown" class="dropdown-menu-right">
+            <button ngbDropdownItem>Action 1</button>
+            <button ngbDropdownItem>Action 2</button>
+          </div>
+        </li>
+      </ul>
+    </div-->
+
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-light mb-3">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#nav2-content-withdropdown"
+      aria-controls="nav2-content-withdropdown"
+      [attr.aria-expanded]="!navbarCollapsed2"
+      aria-label="Toggle navigation"
+      (click)="navbarCollapsed2 = !navbarCollapsed2"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand navbar-brand -->
+    <!--a class="navbar-brand" href="javascript:void(0);" (click)="navbarCollapsed2 = true">Home</a-->
+
+    <!-- Links -->
+    <div [ngbCollapse]="navbarCollapsed2" class="collapse navbar-collapse" id="nav2-content-withdropdown">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/delete']" (click)="navbarCollapsed2 = true" [routerLinkActive]="['active']" >Home</a>
+        </li>
+
+
+
+
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li ngbDropdown class="nav-item">
+          <!-- <button type="button" class="btn nav-link" id="nav2-dropdown2-withdropdown" ngbDropdownToggle>
+            User
+          </button> -->
+          <div ngbDropdownMenu aria-labelledby="nav2-dropdown2-withdropdown" class="dropdown-menu-right">
+            <button ngbDropdownItem>Logout</button>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
