@@ -84,8 +84,12 @@
 		<table id="data-table">
 			<thead>
 				<tr>
-					<th>Permission Application Name</th>
-					<th>Permission Name</th>
+					<th>Application Name</th>
+					<th>Data name</th>
+          <th>Data Type</th>
+          <th>Data Owner</th>
+
+
 				</tr>
 			</thead>
 			<tbody>
@@ -101,12 +105,9 @@
 
 			</tbody>
 		</table>
-
-<ngb-pagination class="mb-5 d-block" [collectionSize]="10" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-
 	</div>
 
-	<!-- <script>
+	<script>
 		function displayData() {
 			var dropdownValue = document.getElementById("dropdown").value;
 			var textbox1Value = document.getElementById("textbox1").value;
@@ -120,7 +121,6 @@
 			tableRows[3].getElementsByTagName("td")[0].innerHTML = dropdownValue + " " + textbox1Value + " 3";
 			tableRows[3].getElementsByTagName("td")[1].innerHTML = textbox2Value + " 3";
 		}
-	</script> -->
-
+	</script>
 </body>
 </html>

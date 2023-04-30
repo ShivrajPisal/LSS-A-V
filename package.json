@@ -23,6 +23,7 @@
     "@ng-select/ng-select": "^10.0.3",
     "bootstrap": "^5.2.0",
     "design-factory": "^2.0.1",
+    "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

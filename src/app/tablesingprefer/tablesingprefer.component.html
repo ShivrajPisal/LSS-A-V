@@ -77,36 +77,27 @@
 	<div class="container">
 		<h1>Access Lists</h1>
 		<br>
-
-
-
-
 		<table id="data-table">
 			<thead>
 				<tr>
-					<th>Permission Application Name</th>
-					<th>Permission Name</th>
+					<th> Application Preference</th>
+					<th>Preference</th>
+          <th>Status</th>
 				</tr>
 			</thead>
 			<tbody>
-
-          <tr *ngFor="let post of posts" >
-            {{post.title}}
-<td>
-          {{post.id}}
-</td>
-       </tr>
-
+				<tr>
+					<td>App 1</td>
+					<td>Create_User</td>
+          <td>True</td>
+				</tr>
 
 
 			</tbody>
 		</table>
-
-<ngb-pagination class="mb-5 d-block" [collectionSize]="10" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-
 	</div>
 
-	<!-- <script>
+	<script>
 		function displayData() {
 			var dropdownValue = document.getElementById("dropdown").value;
 			var textbox1Value = document.getElementById("textbox1").value;
@@ -120,7 +111,6 @@
 			tableRows[3].getElementsByTagName("td")[0].innerHTML = dropdownValue + " " + textbox1Value + " 3";
 			tableRows[3].getElementsByTagName("td")[1].innerHTML = textbox2Value + " 3";
 		}
-	</script> -->
-
+	</script>
 </body>
 </html>

@@ -6,6 +6,8 @@
         <div class="tit1">Amadeus</div>
         <div class="tit2">LSS Access Viewer</div>
         <!-- <div class = "viewContainer">   -->
+
+
         <div class="card" id="apple">
           <div class="card-body">
 
@@ -27,10 +29,10 @@
                   <button type="button" class="btn btn-outline-primary mb-2 mb-md-0 me-2 mt-2" (click)="hidfunc2()">Single-Access</button> -->
 
 
-                  <label for="exampleSelectNativeValidation1" class="form-label" id="action_label">Action Type<span
+                  <label for="exampleSelectNativeValidation1" class="form-label" id="action_label"><b>Action Type</b><span
                       style="color:red" uid="required">*</span></label>
                   <select class="form-select" id="access_type" (change)="getSelectedValue($event)">
-                    <option id="select">--select--</option>
+                    <option id="select">-- select --</option>
                     <option id="list">List-Access<span style="color:red" uid="required"></span></option>
                     <option id="single">Single-Access <span style="color:red" uid="required"></span></option>
 
@@ -41,10 +43,10 @@
 
                   <div *ngIf="display1">
 
-                    <label for="exampleSelectNativeValidation1" class="form-label">Access Type<span style="color:red"
+                    <label for="exampleSelectNativeValidation1" class="form-label"><b>Access Type</b><span style="color:red"
                         uid="required">*</span></label>
-                    <select class="form-select" id="exampleSelectNativeValidation1" >
-                      <option id="list">--select-- <span style="color:red" uid="required"></span></option>
+                    <select class="form-select" id="exampleSelectNativeValidation1"  (change)="getSelectedValueAccessList($event)" >
+                      <option id="list">-- select -- <span style="color:red" uid="required"></span></option>
                       <option id="list">Permission<span style="color:red" uid="required"></span></option>
                       <option id="single">Preferences<span style="color:red" uid="required"></span></option>
                       <option id="list">Attribute<span style="color:red" uid="required"></span></option>
@@ -54,10 +56,10 @@
 
                   <div *ngIf="display2">
 
-                    <label for="exampleSelectNativeValidation1" class="form-label">Access type<span style="color:red"
+                    <label for="exampleSelectNativeValidation1" class="form-label"><b>Access Type</b><span style="color:red"
                         uid="required">*</span></label>
-                    <select class="form-select" id="exampleSelectNativeValidation1"  (change)="getSelectedValueAccess($event)">
-                      <option id="list">--select-- <span style="color:red" uid="required"></span></option>
+                    <select class="form-select" id="exampleSelectNativeValidation1"  (change)="getSelectedValueAccessSingle($event)">
+                      <option id="list">-- select -- <span style="color:red" uid="required"></span></option>
                       <option id="list">Permission<span style="color:red" uid="required"></span></option>
                       <option id="single">Preferences<span style="color:red" uid="required"></span></option>
                       <option id="list">Attribute<span style="color:red" uid="required"></span></option>
@@ -66,72 +68,72 @@
                     </div>
 
                       <div *ngIf="displayperm">
-                      <label for="sign" class="col-form-label">Permission Application Name <span style="color:red" uid="required">*</span></label>
+                      <label for="sign" class="col-form-label" required><b>Permission Application Name </b><span style="color:red" uid="required">*</span></label><br>
 
 
                       <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-                        placeholder="Application Name" /><br>
+                        placeholder="Application Name" required><br>
 
 
 
-                      <label for="sign" class="col-form-label">Permission Name <span style="color:red"
+                      <label for="sign" class="col-form-label"><b>Permission Name</b><span style="color:red"
                           uid="required">*</span></label><br>
 
 
                       <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-                        placeholder="Permission" />
+                        placeholder="Permission" required />
                     </div>
 
                     <div *ngIf="displayprefer">
-                      <label for="sign" class="col-form-label">Application Preference <span style="color:red" uid="required">*</span></label><br>
+                      <label for="sign" class="col-form-label"><b>Application Preference </b><span style="color:red" uid="required">*</span></label><br>
 
 
                       <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-                        placeholder="Preference" /><br>
+                        placeholder="Preference" required /><br>
 
 
 
-                      <label for="sign" class="col-form-label">Preference <span style="color:red"
+                      <label for="sign" class="col-form-label"><b>Preference </b><span style="color:red"
                           uid="required">*</span></label><br>
 
 
                       <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-                        placeholder="Preference" />
+                        placeholder="Preference" required />
                     </div>
 
                     <div *ngIf="displayattri">
-                      <label for="sign" class="col-form-label">Attribute <span style="color:red" uid="required">*</span></label><br>
+                      <label for="sign" class="col-form-label"><b>Attribute </b><span style="color:red" uid="required">*</span></label><br>
 
 
                       <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-                        placeholder="attribute" /><br>
+                        placeholder="attribute" required><br>
  </div>
 
  <div *ngIf="displayacl">
-  <label for="sign" class="col-form-label">Application Name <span style="color:red" uid="required">*</span></label><br>
+  <label for="sign" class="col-form-label"><b>Application Name </b><span style="color:red" uid="required">*</span></label><br>
 
 
   <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-    placeholder="application name" /><br>
-    <label for="sign" class="col-form-label">Data Name <span style="color:red" uid="required">*</span></label><br>
+    placeholder="application name" required><br>
+    <label for="sign" class="col-form-label"><b>Data Name</b> <span style="color:red" uid="required">*</span></label><br>
 
 
     <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-      placeholder="data name" /><br>
-      <label for="sign" class="col-form-label">Data type <span style="color:red" uid="required">*</span></label><br>
+      placeholder="data name" required><br>
+      <label for="sign" class="col-form-label"><b>Data Type</b> <span style="color:red" uid="required">*</span></label><br>
 
 
       <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-        placeholder="data type" /><br>
+        placeholder="data type" required><br>
 
 
 
-  <label for="sign" class="col-form-label">Data owner <span style="color:red"
+  <label for="sign" class="col-form-label"><b>Data Owner</b> <span style="color:red"
       uid="required">*</span></label><br>
 
 
   <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto"
-    placeholder="data owner" />
+    placeholder="data owner" required>
 </div>
 
                   </div>
@@ -140,49 +142,96 @@
 
 
                 <div class="col">
-                  <label for="sign" class="col-form-label">Sign </label>
+                  <label for="sign" class="col-form-label"><b>Sign</b> </label>
                 </div>
                 <div classc="col">
                   <input id="sign" type="text" class="form-control mx-sm-1 d-inline w-auto" placeholder="sign" />
                 </div>
                 <div class="col">
-                  <label for="uid" class="col-form-label">User ID <span style="color:red"
+                  <label for="uid" class="col-form-label"  required><b>User ID</b> <span style="color:red"
                       uid="required">*</span></label>
                 </div>
                 <div classc="col">
-                  <input id="uid" type="text" class="form-control mx-sm-1 d-inline w-auto" placeholder="userID" />
+                  <input id="uid" type="text" class="form-control mx-sm-1 d-inline w-auto" placeholder="userID" required/>
                 </div>
 
                 <div classc="col">
 
                 </div>
                 <div class="col">
-                  <label for="office" class="col-form-label">Office </label>
+                  <label for="office" class="col-form-label"><b>Office</b> </label>
                 </div>
                 <div classc="col">
                   <input id="office" type="text" class="form-control mx-sm-1 d-inline w-auto" placeholder="office" />
                 </div>
 
                 <div class="col">
-                  <label for="org" class="col-form-label">Organization <span style="color:red"
+                  <label for="org" class="col-form-label"><b>Organization</b> <span style="color:red"
                       org="required">*</span></label>
                 </div>
                 <div classc="col">
-                  <input id="org" type="text" class="form-control mx-sm-1 d-inline w-auto" placeholder="organization" />
+                  <input id="org" type="text" class="form-control mx-sm-1 d-inline w-auto" placeholder="organization" required />
                 </div><br>
 
 
+                <div *ngIf="displaybase">
+                  <!-- <input type="submit"> -->
+                  <button  type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2"  (click)="alertfunc('warn')">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                </div>
+
+                 <!-- //list access -->
+                <div *ngIf="displaylistperm">
+                  <button [routerLink]="['/table']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                </div>
+
+                <div *ngIf="displaylistprefer">
+                  <button  type="submit"   [routerLink]="['/tableprefer']" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                </div>
+
+                <div *ngIf="displaylistattri">
+                  <button  type="submit"   [routerLink]="['/tableattri']" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                </div>
+
+                <div *ngIf="displaylistacl">
+                  <button  type="submit"  [routerLink]="['/tableacl']"  class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                </div>
 
 
-                <div *ngIf="display1">
-                  <button [routerLink]="['/table']" type="button" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>
+
+
+
+
+                <!-- //single access -->
+                <div *ngIf="displaysingperm">
+                  <button [routerLink]="['/table2']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
                 </div>
-                <div *ngIf="display2">
-                  <button [routerLink]="['/table2']" type="button" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>
+
+                <div *ngIf="displaysingprefer">
+                  <button [routerLink]="['/tablesingprefer']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
                 </div>
-                <div *ngIf="display1 !== true && display2 !== true">
-                  <button  type="button" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search</button>
+
+                <div *ngIf="displaysingattri">
+                  <button [routerLink]="['/tablesingattri']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
                 </div>
+
+                <div *ngIf="displaysingacl">
+                  <button [routerLink]="['/tablesingacl']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                </div>
+
+
+
+
+
+
                 <!-- <button type="button" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button> -->
                 <!-- <button type="button" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2" [routerLink]="['/table2']">Single Search</button> -->
               </form>

@@ -19,14 +19,14 @@ export class AppComponent implements OnInit  {
     throw new Error('Method not implemented.');
     this.scrHeight = window.innerHeight;
     this.scrWidth = window.innerWidth;
-  
-    
-    
+
+
+
   }
   constructor(){
-    
+
    this.getScreenSize();
 }
-  
-  title = 'aplication';
+
+  title = 'application';
 }

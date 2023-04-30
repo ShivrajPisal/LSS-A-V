@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs' ;
+import { apicall } from '../apicall.service';
+import { Subscription } from 'rxjs'
 import {
   DfProgressIndicatorService,
   DfProgressIndicatorRef,
@@ -16,12 +21,60 @@ import {
  class AppModule {}
 
 @Component({
-  selector: 'app-delete',
+  selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 
-export class DeleteComponent {
+export class MainComponent {
+  subscription = new Subscription();
+
+    posts:any;
+
+
+
+     url = 'http://jsonplaceholder.typicode.com/posts';
+
+    constructor(private service:apicall) {
+
+
+    }
+
+
+
+     ngOnInit() {
+
+    this.getPostList(this.url);
+
+    }
+
+    public getPostList(url:any){
+
+     this.subscription.add(
+
+     this.service.getPosts(url)
+
+     .subscribe(res => {
+
+     console.log('--------');
+
+    this.posts = res;
+
+     console.log(this.posts);
+
+
+
+
+     },)
+
+    );
+
+     }
+
+  alertfunc(warn: string){
+
+    alert("Please fill all the fields");
+  }
   // openGlobalIndicator(content?: boolean | TemplateRef<unknown>) {
   //   let ref: DfProgressIndicatorRef;
   //   if (content === true) {
@@ -41,6 +94,7 @@ export class DeleteComponent {
   myClickFunction(event:any) {
     let first_name = (<HTMLInputElement>document.getElementById("office")).value;
   }
+  // for single list input fields
   display2=false;
   display1=false;
 
@@ -51,6 +105,31 @@ export class DeleteComponent {
   displayattri=false;
 
   displayacl=false;
+
+  //for tables list access
+displaybase=true;
+
+  displaylistperm=false;
+
+  displaylistprefer=false;
+
+  displaylistattri=false;
+
+  displaylistacl=false;
+
+
+// For tables single acceess
+// displaybase=true;
+
+  displaysingperm=false;
+
+  displaysingprefer=false;
+
+  displaysingattri=false;
+
+  displaysingacl=false;
+
+
      hidfunc1(){
 
           this.display1= !this.display1;
@@ -79,7 +158,82 @@ getSelectedValue(event:any){
 
 }
 
-getSelectedValueAccess(event:any){
+
+getSelectedValueAccessList(event:any){
+
+  // Prints selected value
+
+  var d=event.target.value;
+  if(d=='Permission'){
+   this.displaybase = false;
+       this.displaylistattri=false;
+       this.displaylistprefer=false;
+    this.displaylistperm=!this.displaylistperm;
+
+    this.displaysingprefer=false;
+    this.displaysingattri=false;
+    this.displaysingacl=false;
+      this.displaysingperm=false;
+  }
+  else if(d=='Preferences'){
+    //  this.display1 = false;
+    this.displaybase=false;
+    this.displaylistperm=false;
+
+    this.displaylistattri=false;
+    this.displaylistacl=false;
+
+      this.displaylistprefer=!this.displaylistprefer;
+
+      this.displaysingprefer=false;
+      this.displaysingattri=false;
+      this.displaysingacl=false;
+        this.displaysingperm=false;
+    }
+    else if(d=='Attribute'){
+      //  this.display1 = false;
+    this.displaybase=false;
+      this.displaylistprefer=false;
+
+      this.displaylistacl=false;
+        this.displaylistperm=false;
+        this.displaylistattri=!this.displaylistattri;
+
+        this.displaysingprefer=false;
+        this.displaysingattri=false;
+        this.displaysingacl=false;
+          this.displaysingperm=false;
+      }
+      else if(d=='ACL'){
+        //  this.display1 = false;
+
+        this.displaybase=false;
+        this.displaylistprefer=false;
+        this.displaylistattri=false;
+
+
+        this.displaylistperm=false;
+          this.displaylistacl=!this.displaylistacl;
+
+          this.displaysingprefer=false;
+          this.displaysingattri=false;
+          this.displaysingacl=false;
+            this.displaysingperm=false;
+        }
+
+
+      }
+
+  // else if(d=='List-Access*')
+  // {
+  // this.display2=false;
+  // this.display1=!this.display1;
+  // }
+
+
+
+
+getSelectedValueAccessSingle(event:any){
 
   // Prints selected value
 
@@ -89,7 +243,22 @@ getSelectedValueAccess(event:any){
   this.displayprefer=false;
   this.displayattri=false;
   this.displayacl=false;
-    this.displayperm=!this.displayperm;
+  this.displayperm=!this.displayperm;
+
+
+
+
+this.displaybase=false;
+    this.displaysingprefer=false;
+  this.displaysingattri=false;
+  this.displaysingacl=false;
+    this.displaysingperm=!this.displaysingperm;
+
+    this.displaylistprefer=false;
+
+    this.displaylistacl=false;
+      this.displaylistperm=false;
+      this.displaylistattri=false;
   }
   else if(d=='Preferences'){
     //  this.display1 = false;
@@ -97,8 +266,23 @@ getSelectedValueAccess(event:any){
 
     this.displayattri=false;
     this.displayacl=false;
+    this.displayprefer=!this.displayprefer;
 
-      this.displayprefer=!this.displayprefer;
+
+
+
+      this.displaybase=false;
+
+      this.displaysingperm=false;
+  this.displaysingattri=false;
+  this.displaysingacl=false;
+    this.displaysingprefer=!this.displaysingprefer;
+
+    this.displaylistprefer=false;
+
+    this.displaylistacl=false;
+      this.displaylistperm=false;
+      this.displaylistattri=false;
     }
     else if(d=='Attribute'){
       //  this.display1 = false;
@@ -108,6 +292,21 @@ getSelectedValueAccess(event:any){
       this.displayacl=false;
         this.displayperm=false;
         this.displayattri=!this.displayattri;
+        this.displaysingattri=!this.displaysingattri;
+
+
+        this.displaybase=false;
+
+        this.displaysingprefer=false;
+  this.displaysingperm=false;
+  this.displaysingacl=false;
+
+
+    this.displaylistprefer=false;
+
+    this.displaylistacl=false;
+      this.displaylistperm=false;
+      this.displaylistattri=false;
       }
       else if(d=='ACL'){
         //  this.display1 = false;
@@ -117,6 +316,26 @@ getSelectedValueAccess(event:any){
 
         this.displayperm=false;
           this.displayacl=!this.displayacl;
+          this.displaysingacl=!this.displaysingacl;
+
+
+          this.displaybase=false;
+
+          this.displaysingprefer=false;
+        this.displaysingattri=false;
+
+
+        this.displaysingperm=false;
+
+
+
+          this.displaylistprefer=false;
+
+          this.displaylistacl=false;
+            this.displaylistperm=false;
+            this.displaylistattri=false;
+
+
         }
   // else if(d=='List-Access*')
   // {
@@ -159,3 +378,9 @@ getSelectedValueAccess(event:any){
       this.dropdownSelected[dropdownId] = id;
     }
   }
+
+  // export class ApiIntegrate implements OnInit {
+
+
+
+  // }

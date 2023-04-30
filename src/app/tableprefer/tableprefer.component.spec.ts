@@ -1,27 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { TablepreferComponent } from './tableprefer.component';
 
-describe('MainComponent', () => {
-
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('TablepreferComponent', () => {
+  let component: TablepreferComponent;
+  let fixture: ComponentFixture<TablepreferComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ TablepreferComponent ]
     })
-
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(TablepreferComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });
-

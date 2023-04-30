@@ -1,27 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { TableattriComponent } from './tableattri.component';
 
-describe('MainComponent', () => {
-
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('TableattriComponent', () => {
+  let component: TableattriComponent;
+  let fixture: ComponentFixture<TableattriComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ TableattriComponent ]
     })
-
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(TableattriComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });
-

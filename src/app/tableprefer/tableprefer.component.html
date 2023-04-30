@@ -84,14 +84,14 @@
 		<table id="data-table">
 			<thead>
 				<tr>
-					<th>Permission Application Name</th>
-					<th>Permission Name</th>
+					<th>Application Preference</th>
+					<th>Preference </th>
 				</tr>
 			</thead>
 			<tbody>
 
           <tr *ngFor="let post of posts" >
-            {{post.title}}
+
 <td>
           {{post.id}}
 </td>
@@ -101,12 +101,9 @@
 
 			</tbody>
 		</table>
-
-<ngb-pagination class="mb-5 d-block" [collectionSize]="10" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
-
 	</div>
 
-	<!-- <script>
+	<script>
 		function displayData() {
 			var dropdownValue = document.getElementById("dropdown").value;
 			var textbox1Value = document.getElementById("textbox1").value;
@@ -120,7 +117,6 @@
 			tableRows[3].getElementsByTagName("td")[0].innerHTML = dropdownValue + " " + textbox1Value + " 3";
 			tableRows[3].getElementsByTagName("td")[1].innerHTML = textbox2Value + " 3";
 		}
-	</script> -->
-
+	</script>
 </body>
 </html>

@@ -1,27 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { TablesingaclComponent } from './tablesingacl.component';
 
-describe('MainComponent', () => {
-
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('TablesingaclComponent', () => {
+  let component: TablesingaclComponent;
+  let fixture: ComponentFixture<TablesingaclComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ TablesingaclComponent ]
     })
-
     .compileComponents();
 
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(TablesingaclComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });
-
