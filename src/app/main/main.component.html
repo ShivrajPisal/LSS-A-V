@@ -176,29 +176,29 @@
 
                 <div *ngIf="displaybase">
                   <!-- <input type="submit"> -->
-                  <button  type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2"  (click)="alertfunc('warn')">Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button" class="btn btn-primary mb-2 mb-md-0 me-2"  (click)="alertfunc('warn')"><span class="icon-search" aria-hidden="true" ></span>Search</button>
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                  <!-- //list access -->
                 <div *ngIf="displaylistperm">
-                  <button [routerLink]="['/table']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"   [routerLink]="['/table']" class="btn btn-primary mb-2 mb-md-0 me-2" ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                 <div *ngIf="displaylistprefer">
-                  <button  type="submit"   [routerLink]="['/tableprefer']" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"    [routerLink]="['/tableprefer']"  class="btn btn-primary mb-2 mb-md-0 me-2"  ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                 <div *ngIf="displaylistattri">
-                  <button  type="submit"   [routerLink]="['/tableattri']" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"    [routerLink]="['/tableattri']" class="btn btn-primary mb-2 mb-md-0 me-2"  ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                 <div *ngIf="displaylistacl">
-                  <button  type="submit"  [routerLink]="['/tableacl']"  class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"   [routerLink]="['/tableacl']"   class="btn btn-primary mb-2 mb-md-0 me-2"  ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
 
@@ -208,23 +208,23 @@
 
                 <!-- //single access -->
                 <div *ngIf="displaysingperm">
-                  <button [routerLink]="['/table2']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"   [routerLink]="['/table2']"   class="btn btn-primary mb-2 mb-md-0 me-2" ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                 <div *ngIf="displaysingprefer">
-                  <button [routerLink]="['/tablesingprefer']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"     [routerLink]="['/tablesingprefer']"  class="btn btn-primary mb-2 mb-md-0 me-2"  ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                 <div *ngIf="displaysingattri">
-                  <button [routerLink]="['/tablesingattri']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button"  [routerLink]="['/tablesingattri']"   class="btn btn-primary mb-2 mb-md-0 me-2"  ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
                 <div *ngIf="displaysingacl">
-                  <button [routerLink]="['/tablesingacl']" type="submit" class="btn btn-primary mb-2 mb-md-0 me-2 mt-2">Search </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2">Clear</button>
+                  <button type="button" [routerLink]="['/tablesingacl']" class ="btn btn-primary mb-2 mb-md-0 me-2"  ><span class="icon-search" aria-hidden="true" ></span>Search</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp; &nbsp; <button type="reset" class="btn btn-danger mb-2 mb-md-0 me-2 mt-2"><span class="icon-remove-format" aria-hidden="true"></span>Clear</button>
                 </div>
 
 
