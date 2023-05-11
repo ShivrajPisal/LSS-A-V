@@ -22,7 +22,6 @@ import { TablesingpreferComponent } from './tablesingprefer/tablesingprefer.comp
 import { TablesingattriComponent } from './tablesingattri/tablesingattri.component';
 import { TablesingaclComponent } from './tablesingacl/tablesingacl.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,7 @@ import { TablesingaclComponent } from './tablesingacl/tablesingacl.component';
     HomeComponent,
     formComponent,
     MainComponent,
-    TableComponent,
+    // TableComponent,
     Table2Component,
     TablepreferComponent,
     TableattriComponent,

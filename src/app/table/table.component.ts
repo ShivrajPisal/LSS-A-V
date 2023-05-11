@@ -5,34 +5,51 @@ import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs' ;
 import { apicall } from '../apicall.service';
-import { NgIf } from '@angular/common';
-import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
-import { Subscription } from 'rxjs';
+import { NgFor, NgIf } from '@angular/common';
 
-const FILTER_PAG_REGEX = /[^0-2]/g;
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { Subscription } from 'rxjs';
+import {  CommonModule} from "@angular/common";
+
+
+
+const FILTER_PAG_REGEX = /[^0-9]/g;
+
 
 @Component({
   selector: 'app-table',
+  standalone: true,
   templateUrl: './table.component.html',
-  // standalone: true,
-  // imports: [NgIf, NgbPaginationModule],
+  imports: [NgbPaginationModule,NgFor,NgIf,CommonModule],
   styleUrls: ['./table.component.scss']
 })
 
+
+
 export class TableComponent {
+page = 1;
 
-  page = 1;
 
-  selectPage(page: string) {
-    this.page = isNaN(parseInt(page, 5)) ? 1 : parseInt(page, 5);
-  }
+pageSize = 20;
 
-  formatInput(input: HTMLInputElement) {
-    input.value = input.value.replace(FILTER_PAG_REGEX, '');
-  }
+selectPage(page: string) {
+  this.page = isNaN(parseInt(page, 10)) ? 1: parseInt(page, 10);
+}
+
+formatInput(input: HTMLInputElement) {
+  input.value = input.value.replace(FILTER_PAG_REGEX, '');
+}
+
+
+
+
+
+// API fetching
   subscription = new Subscription();
 
   posts:any;
+
 
 
 
